@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-<h1>Tambah User</h1>
 
-<form action="form_action.php" method="post">
+<body>
+
+    <h1>Tambah User</h1>
+
+    <form action="form_action.php" method="post">
         <label for="username">Username :</label>
         <input type="text" name="usernmae" placeholder="Username" id="username" required>
         <br>
@@ -32,8 +34,8 @@
         <br>
         <label for="jenis_kelamin">Laki-laki</label>
         <select id="jenis_kelamin" name="jenis_kelamin">
-        <option value="laki-laki">Laki-Laki</option>
-        <option value="perempuan">perempuan</option>
+            <option value="laki-laki">Laki-Laki</option>
+            <option value="perempuan">perempuan</option>
         </select>
         <br>
         <br>
@@ -50,4 +52,5 @@
 
 
 </body>
+
 </html>
