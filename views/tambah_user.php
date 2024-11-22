@@ -1,3 +1,5 @@
+
+                        
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,7 @@
 
     <h1>Tambah User</h1>
 
-    <form action="form_action.php" method="post">
+    <form action="" method="post">
         <label for="username">Username :</label>
         <input type="text" name="usernmae" placeholder="Username" id="username" required>
         <br>
@@ -32,7 +34,7 @@
         <input type="text" name="alamat_user" placeholder="Alamat User" id="alamat_user" required>
         <br>
         <br>
-        <label for="jenis_kelamin">Laki-laki</label>
+        <label for="jenis_kelamin"></label>
         <select id="jenis_kelamin" name="jenis_kelamin">
             <option value="laki-laki">Laki-Laki</option>
             <option value="perempuan">perempuan</option>
