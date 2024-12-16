@@ -4,7 +4,11 @@ include_once '../models/m_user.php';
 
 $user = new user();
 
-if ($_GET['aksi'] == 'tambah' ) {
+if (!empty($_GET['aksi'])) {
+
+
+try {
+  if ($_GET['aksi'] == 'tambah' ) {
   $id = $_POST['id_user'];
   $username = $_POST['username'];
   $email = $_POST['email'];
@@ -15,6 +19,12 @@ if ($_GET['aksi'] == 'tambah' ) {
   $tempatlahir = $_POST['tempatlahir_user'];
   $tanggallahir = $_POST['tanggallahir_user'];
 
-  // argumen, parameternya di m_user
   $user -> tambah_user ($id, $username,$email,$password,$nama,$alamat,$jk,$tempatlahir, $tanggallahir);
+
+  }
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
+}else {
+  $user = $user->tampil_data();
 }

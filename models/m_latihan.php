@@ -1,7 +1,7 @@
 <?php
 
 // Memanggil file c_koneksi yang ada pada folder controllers
-include_once '../../controllers/c_koneksi.php';
+include_once '../controllers/c_koneksi.php';
 
 class latihan
 {
@@ -197,5 +197,28 @@ function tampil_data5()
     }
     
   }
+
+  function tampil_data_byid($id){
+    $conn = new koneksi();
+    $sql = "SELECT *    FROM user WHERE id_user = $id";
+  
+    $query = mysqli_query($conn->koneksi,$sql);
+  
+    if ($query-> num_rows > 0) {
+      while($data = mysqli_fetch_object($query)){
+        $result[] = $data;
+      }
+      return $result;
+    } else {
+      echo "Tidak Ada Data";
+    }
+  }
+
+function ubah_data(){
+  
+}
+
+
+
 }
 

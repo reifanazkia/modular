@@ -23,7 +23,7 @@ class user
     // Untuk mengecek apakah $query ada datanya atau tidak
     if ($query -> num_rows > 0) {
       // Kita mencacah data menjadi data array asosiatif
-      while($data = mysqli_fetch_assoc($query)){
+      while($data = mysqli_fetch_object($query)){
         // Kita bungkus hasil cacahan dari $data
         $hasil[] = $data;
       }
@@ -49,4 +49,22 @@ class user
     }
     
   } 
+  
+function tampil_data_byid($id){
+  $conn = new koneksi();
+  $sql = "SELECT *    FROM user WHERE id_user = $id";
+
+  $query = mysqli_query($conn->koneksi,$sql);
+
+  if ($query-> num_rows > 0) {
+    while($data = mysqli_fetch_object($query)){
+      $result[] = $data;
+    }
+    return $result;
+  } else {
+    echo "Tidak Ada Data";
+  }
+}
+
+
 }
