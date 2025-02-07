@@ -101,13 +101,14 @@ $user = new user();
       <table>
         <?php
 
-        foreach ($user->tampil_data_byid($_GET['id']) as $data ) :
+        foreach ($user->tampil_data_byid($_GET['id']) as $data) :
 
         ?>
         <tr>
+        <input type="text" id="username" name="id_user"  value="<?= $data->id_user?>" hidden>
         <td><label for="username">Username:</label></td>
-        <input type="text" id="username" name="id_user" hidden>
-        <td><input type="text" name="username" id="username" value="<?= $data->username?>"></td>
+        
+        <td><input type="text" name="username" id="username" value="<?= $data->username ?>"></td>
         </tr>
         <tr>
         <td><label for="email">Email:</label></td>
