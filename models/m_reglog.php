@@ -11,7 +11,7 @@ function regist($id_user, $username,$email,$password,$nama,$alamat,$jk,$tempatla
     $query = mysqli_query($conn->koneksi,$sql);
 
     if ($query) {
-      echo "<script>alert('data berhasil ditambahkan'), window.location='../login.php'</script>";
+      echo "<script>alert('data berhasil ditambahkan'), window.location='../index.php'</script>";
     } else {
       echo "<script>alert('data gagal ditambahkan'), window.location='../registrasi.php'</script>";
     }
@@ -55,10 +55,10 @@ function regist($id_user, $username,$email,$password,$nama,$alamat,$jk,$tempatla
           exit;
 
         }else {
-          echo "<script>alert('Email Atau Password Salah'), window.location='../login.php'</script>";
+          echo "<script>alert('Email Atau Password Salah'), window.location='../index.php'</script>";
         }
       }else {
-        echo "<script>alert('Email Atau Password Salah'), window.location='../login.php'</script>";
+        echo "<script>alert('Email Atau Password Salah'), window.location='../index.php'</script>";
       }
     }
   }
